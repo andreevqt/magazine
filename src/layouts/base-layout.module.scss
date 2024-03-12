@@ -1,0 +1,32 @@
+@import 'scss/variables';
+
+.content {
+  padding: 20px 0;
+}
+
+.root {
+  &::before {
+    content: '';
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background-color: rgba($black, 0.7);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3CradialGradient id='a1' cx='.66' fx='.66' cy='.3125' fy='.3125' gradientTransform='scale(1.5)'%3E%3Cstop offset='0' stop-color='%23FFFFFF'%3E%3C/stop%3E%3Cstop offset='.3' stop-color='%23FFFFFF' stop-opacity='.9'%3E%3C/stop%3E%3Cstop offset='.6' stop-color='%23FFFFFF' stop-opacity='.6'%3E%3C/stop%3E%3Cstop offset='.8' stop-color='%23FFFFFF' stop-opacity='.3'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='0'%3E%3C/stop%3E%3C/radialGradient%3E%3Ccircle transform-origin='center' fill='none' stroke='url(%23a1)' stroke-width='15' stroke-linecap='round' stroke-dasharray='200 1000' stroke-dashoffset='0' cx='100' cy='100' r='70'%3E%3CanimateTransform type='rotate' attributeName='transform' calcMode='spline' dur='2' values='360;0' keyTimes='0;1' keySplines='0 0 1 1' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/circle%3E%3Ccircle transform-origin='center' fill='none' opacity='.2' stroke='%23FFFFFF' stroke-width='15' stroke-linecap='round' cx='100' cy='100' r='70'%3E%3C/circle%3E%3C/svg%3E");
+  }
+
+  &.loading {
+    &::before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

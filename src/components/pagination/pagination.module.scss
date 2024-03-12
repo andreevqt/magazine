@@ -1,0 +1,26 @@
+@import 'scss/variables';
+@import 'scss/mixins';
+
+.list {
+  @include font(16px, 1.4, 500);
+  padding-top: 30px;
+  padding-bottom: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.item {
+  margin-right: 15px;
+}
+
+.link {
+  color: $base-color;
+
+  &.active {
+    border-bottom: 2px solid darken($primary, 20%);
+  }
+}

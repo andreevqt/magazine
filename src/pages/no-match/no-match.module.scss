@@ -1,0 +1,13 @@
+@import 'scss/mixins';
+@import 'scss/variables';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  @include font(48px, 1, 600);
+}

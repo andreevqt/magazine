@@ -1,0 +1,39 @@
+@import 'scss/variables';
+@import 'scss/mixins';
+
+.root {
+  position: relative;
+  padding: 20px;
+  background-color: $white;
+  border-left: 4px solid $primary;
+  min-height: 700px;
+  margin-left: 80px;
+  color: $base-color;
+}
+
+.title {
+  @include font(36px, 1, 600);
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.goBack {
+  cursor: pointer;
+  box-shadow: $box-shadow;
+  position: absolute;
+  left: -80px;
+  top: 0;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: $white;
+  color: $base-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  @include font(16px, 1.3, 500);
+}

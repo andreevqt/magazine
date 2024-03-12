@@ -1,0 +1,17 @@
+@import 'scss/variables';
+
+body {
+  margin: 0;
+  background-color: $body-bg;
+  color: $base-color;
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}

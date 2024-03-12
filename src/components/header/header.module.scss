@@ -1,0 +1,14 @@
+@import 'scss/mixins/font';
+@import 'scss/variables';
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 20px 0;
+  background-color: $primary;
+}
+
+.logo {
+  @include font(20px, 1, 600);
+  color: $white;
+}
